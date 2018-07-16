@@ -46,7 +46,7 @@ public class AsciiRender : MonoBehaviour
 
     public char getGreyscaleChar(double hue)
     {
-        int charPos = Convert.ToInt32(Math.Ceiling(hue * 70));
-        return greyscaleAscii[charPos];
+        int charPos = Convert.ToInt32(Math.Ceiling(hue * 69));
+        return greyscaleAscii[69 - charPos];
     }
 }
