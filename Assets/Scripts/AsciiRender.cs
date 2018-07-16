@@ -14,12 +14,12 @@ public class AsciiRender : MonoBehaviour
 
     private void Start()
     {
-        asciiArray = new Text[96,54];
-        for (int x = 0; x < 96; x++)
+        asciiArray = new Text[160, 90];
+        for (int x = 0; x < 160; x++)
         {
-            for (int y = 0; y < 54; y++)
+            for (int y = 0; y < 90; y++)
             {
-                var newText = Instantiate(prefabText, new Vector3(transform.position.x + (20 * x), transform.position.y + (20 * y), transform.position.z), Quaternion.identity);
+                var newText = Instantiate(prefabText, new Vector3(transform.position.x + (12 * x), transform.position.y + (12 * y), transform.position.z), Quaternion.identity);
                 newText.transform.parent = gameObject.transform;
                 asciiArray[x,y] = newText;
             }
@@ -35,9 +35,9 @@ public class AsciiRender : MonoBehaviour
 
         //Color[] renderGrid = tex2d.GetPixels(0, 0, 96, 54);
         
-        for (int x = 0; x < 96; x++)
+        for (int x = 0; x < 160; x++)
         {
-            for (int y = 0; y < 54; y++)
+            for (int y = 0; y < 90; y++)
             {
                 asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(tex2d.GetPixel(x, y).grayscale)).ToString();
             }
