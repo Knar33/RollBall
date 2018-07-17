@@ -33,13 +33,13 @@ public class AsciiRender : MonoBehaviour
         tex2d.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         tex2d.Apply();
 
-        //Color[] renderGrid = tex2d.GetPixels(0, 0, 96, 54);
+        Color[] renderGrid = tex2d.GetPixels(0, 0, 160, 90);
         
         for (int x = 0; x < 160; x++)
         {
             for (int y = 0; y < 90; y++)
             {
-                asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(tex2d.GetPixel(x, y).grayscale)).ToString();
+                asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (160 * y)].grayscale)).ToString();
             }
         }
     }
