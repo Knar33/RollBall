@@ -1399,12 +1399,12 @@ Prefab:
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114003944192511194, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
@@ -1444,7 +1444,88 @@ Prefab:
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: checkPaddingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_parseCtrlCharacters
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 32531
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_textInfo.materialCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_subTextObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_lineSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_textAlignment
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_verticalMapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_enableKerning
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975,
+        type: 2}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114003944192511194, guid: 42a6ff98a38479e4d9bc85108517d49c, type: 2}
