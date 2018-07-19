@@ -4,29 +4,15 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.Text;
 
 public class AsciiRender : MonoBehaviour
 {
     public CameraController renderCam;
     public RenderTexture renderTexture;
-    public TextMeshProUGUI prefabText;
-    private TextMeshProUGUI[,] asciiArray;
+    public TextMeshProUGUI renderText;
     private char[] greyscaleAscii = new char[] { '$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']', '?', '-', '_', '+', '~', '<', '>', 'i', '!', 'l', 'I', ';', ':', ',', '"', '^', '`', '\'', '.', ' ' };
-
-    private void Start()
-    {
-        asciiArray = new TextMeshProUGUI[320, 180];
-        for (int x = 0; x < 320; x++)
-        {
-            for (int y = 0; y < 180; y++)
-            {
-                var newText = Instantiate(prefabText, new Vector3(transform.position.x + (6 * x), transform.position.y + (6 * y), transform.position.z), Quaternion.identity);
-                newText.transform.parent = gameObject.transform;
-                asciiArray[x,y] = newText;
-            }
-        }
-    }
-
+    
     void Update()
     {
         Texture2D tex2d = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
@@ -35,15 +21,20 @@ public class AsciiRender : MonoBehaviour
         tex2d.Apply();
 
         Color[] renderGrid = tex2d.GetPixels(0, 0, 320, 180);
+
+        StringBuilder sb = new StringBuilder("</mspace>");
+        //TODO: try as char array
         
-        string asciiText = ""
-        for (int x = 0; x < 320; x++)
+        for (int y = 0; y < 180; y++)
         {
-            for (int y = 0; y < 180; y++)
+            for (int x = 319; x > 0; x--)
             {
-                asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (320 * y)].grayscale)).ToString();
+                sb.Append(getGreyscaleChar(Convert.ToDouble(renderGrid[x + (320 * y)].grayscale)).ToString());
             }
+            sb.Append("\n");
         }
+        sb.Insert(0, "<mspace=6>");
+        renderText.text = sb.ToString();
     }
 
     public char getGreyscaleChar(double hue)
