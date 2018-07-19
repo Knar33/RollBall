@@ -16,18 +16,7 @@ public class AsciiRender : MonoBehaviour
 
     private void Start()
     {
-        asciiCharArray = new char[58257];
-    }
-
-    void Update()
-    {
-        Texture2D tex2d = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
-        RenderTexture.active = renderTexture;
-        tex2d.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
-        tex2d.Apply();
-
-        Color[] renderGrid = tex2d.GetPixels(0, 0, 320, 180);
-
+        asciiCharArray = new char[57814];
         asciiCharArray[0] = '<';
         asciiCharArray[1] = 'm';
         asciiCharArray[2] = 's';
@@ -38,26 +27,49 @@ public class AsciiRender : MonoBehaviour
         asciiCharArray[7] = '=';
         asciiCharArray[8] = '6';
         asciiCharArray[9] = '>';
-        asciiCharArray[58248] = '<';
-        asciiCharArray[58249] = '/';
-        asciiCharArray[58250] = 'm';
-        asciiCharArray[58251] = 's';
-        asciiCharArray[58252] = 'p';
-        asciiCharArray[58253] = 'a';
-        asciiCharArray[58254] = 'c';
-        asciiCharArray[58255] = 'e';
-        asciiCharArray[58256] = '>';
-        //TODO: try as char array
+        asciiCharArray[10] = '<';
+        asciiCharArray[11] = 'l';
+        asciiCharArray[12] = 'i';
+        asciiCharArray[13] = 'n';
+        asciiCharArray[14] = 'e';
+        asciiCharArray[15] = '-';
+        asciiCharArray[16] = 'h';
+        asciiCharArray[17] = 'e';
+        asciiCharArray[18] = 'i';
+        asciiCharArray[19] = 'g';
+        asciiCharArray[20] = 'h';
+        asciiCharArray[21] = 't';
+        asciiCharArray[22] = '=';
+        asciiCharArray[23] = '6';
+        asciiCharArray[24] = '>';
+        asciiCharArray[57805] = '<';
+        asciiCharArray[57806] = '/';
+        asciiCharArray[57807] = 'm';
+        asciiCharArray[57808] = 's';
+        asciiCharArray[57809] = 'p';
+        asciiCharArray[57810] = 'a';
+        asciiCharArray[57811] = 'c';
+        asciiCharArray[57812] = 'e';
+        asciiCharArray[57813] = '>';
+    }
 
+    void Update()
+    {
+        Texture2D tex2d = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
+        RenderTexture.active = renderTexture;
+        tex2d.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
+        tex2d.Apply();
+
+        Color[] renderGrid = tex2d.GetPixels(0, 0, 320, 180);
+        
         for (int y = 0; y < 180; y++)
         {
             for (int x = 0; x < 320; x++)
             {
-                int charSpace = 10 + (2 * y) + x + (320 * y);
-                asciiCharArray[charSpace] = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (320 * y)].grayscale));
+                int charSpace = 25 + (1 * y) + x + (320 * y);
+                asciiCharArray[charSpace] = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (320 * (179-y))].grayscale));
             }
-            asciiCharArray[10 + (2 * y) + 320 + (320 * y)] = '\\';
-            asciiCharArray[10 + (2 * y) + 320 + (320 * y) + 1] = 'n';
+            asciiCharArray[25 + 320 + (321 * y)] = '\n';
         }
         string output = new string(asciiCharArray);
         renderText.text = output;
