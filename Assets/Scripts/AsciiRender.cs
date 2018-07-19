@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class AsciiRender : MonoBehaviour
 {
     public CameraController renderCam;
     public RenderTexture renderTexture;
-    public Text prefabText;
-    private Text[,] asciiArray;
+    public TextMeshProUGUI prefabText;
+    private TextMeshProUGUI[,] asciiArray;
     private char[] greyscaleAscii = new char[] { '$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']', '?', '-', '_', '+', '~', '<', '>', 'i', '!', 'l', 'I', ';', ':', ',', '"', '^', '`', '\'', '.', ' ' };
 
     private void Start()
     {
-        asciiArray = new Text[160, 90];
+        asciiArray = new TextMeshProUGUI[160, 90];
         for (int x = 0; x < 160; x++)
         {
             for (int y = 0; y < 90; y++)
