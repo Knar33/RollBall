@@ -15,12 +15,12 @@ public class AsciiRender : MonoBehaviour
 
     private void Start()
     {
-        asciiArray = new TextMeshProUGUI[160, 90];
-        for (int x = 0; x < 160; x++)
+        asciiArray = new TextMeshProUGUI[320, 180];
+        for (int x = 0; x < 320; x++)
         {
-            for (int y = 0; y < 90; y++)
+            for (int y = 0; y < 180; y++)
             {
-                var newText = Instantiate(prefabText, new Vector3(transform.position.x + (12 * x), transform.position.y + (12 * y), transform.position.z), Quaternion.identity);
+                var newText = Instantiate(prefabText, new Vector3(transform.position.x + (6 * x), transform.position.y + (6 * y), transform.position.z), Quaternion.identity);
                 newText.transform.parent = gameObject.transform;
                 asciiArray[x,y] = newText;
             }
@@ -34,13 +34,14 @@ public class AsciiRender : MonoBehaviour
         tex2d.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         tex2d.Apply();
 
-        Color[] renderGrid = tex2d.GetPixels(0, 0, 160, 90);
+        Color[] renderGrid = tex2d.GetPixels(0, 0, 320, 180);
         
-        for (int x = 0; x < 160; x++)
+        string asciiText = ""
+        for (int x = 0; x < 320; x++)
         {
-            for (int y = 0; y < 90; y++)
+            for (int y = 0; y < 180; y++)
             {
-                asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (160 * y)].grayscale)).ToString();
+                asciiArray[x,y].text = getGreyscaleChar(Convert.ToDouble(renderGrid[x + (320 * y)].grayscale)).ToString();
             }
         }
     }

@@ -1345,12 +1345,12 @@ Prefab:
     - target: {fileID: 224810053249389218, guid: 142d1f664d7102f488ddc371437298e2,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 6
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 224810053249389218, guid: 142d1f664d7102f488ddc371437298e2,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 6
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 224810053249389218, guid: 142d1f664d7102f488ddc371437298e2,
         type: 2}
@@ -1391,6 +1391,36 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_text
+      value: <mspace=6>asdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdadasdasdasdasd</mspace>
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114264174921955560, guid: 142d1f664d7102f488ddc371437298e2,
+        type: 2}
+      propertyPath: m_textAlignment
+      value: 257
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 142d1f664d7102f488ddc371437298e2, type: 2}
