@@ -8,7 +8,6 @@ using System.Text;
 
 public class AsciiRender : MonoBehaviour
 {
-    public CameraController renderCam;
     public RenderTexture renderTexture;
     public TextMeshProUGUI renderText;
     private char[] asciiCharArray;
