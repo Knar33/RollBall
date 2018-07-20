@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465797, g: 0.4964139, b: 0.5748177, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,22 +416,14 @@ GameObject:
   m_Component:
   - component: {fileID: 282840814}
   - component: {fileID: 282840813}
-  - component: {fileID: 282840811}
   - component: {fileID: 282840812}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &282840811
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 282840810}
-  m_Enabled: 1
 --- !u!114 &282840812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,11 +598,10 @@ GameObject:
   m_Component:
   - component: {fileID: 549260039}
   - component: {fileID: 549260038}
-  - component: {fileID: 549260037}
   - component: {fileID: 549260036}
   m_Layer: 0
   m_Name: Render Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,13 +618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 918446965}
---- !u!81 &549260037
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 549260035}
-  m_Enabled: 0
 --- !u!20 &549260038
 Camera:
   m_ObjectHideFlags: 0
@@ -1149,7 +1133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19796b7f95ab61d4aaeb4058e3dd9673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   countText: {fileID: 1437361147}
   winText: {fileID: 33773028}
 --- !u!54 &918446971
@@ -1503,6 +1486,23 @@ Prefab:
     - {fileID: 114003944192511194, guid: 42a6ff98a38479e4d9bc85108517d49c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 42a6ff98a38479e4d9bc85108517d49c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1102838021 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 1667133086}
+--- !u!114 &1102838022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102838021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19796b7f95ab61d4aaeb4058e3dd9673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 1437361147}
+  winText: {fileID: 33773028}
 --- !u!4 &1102838026 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -1855,10 +1855,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1513689491}
   - component: {fileID: 1513689494}
-  - component: {fileID: 1513689493}
   - component: {fileID: 1513689492}
+  - component: {fileID: 1513689493}
   m_Layer: 0
-  m_Name: FirstPersonCharacter (1)
+  m_Name: FirstPersonCharacterRender
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1888,8 +1888,7 @@ Behaviour:
 --- !u!81 &1513689493
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513689490}
   m_Enabled: 1
@@ -1943,7 +1942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1989,7 +1988,12 @@ Prefab:
       propertyPath: m_CullingMask.m_Bits
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1677196219
