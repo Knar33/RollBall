@@ -1371,27 +1371,27 @@ Prefab:
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_text
-      value: 
+      value: asdfasdfasdfasdfasdfasdfasdddddddddddddddddddddf
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
@@ -1411,7 +1411,7 @@ Prefab:
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 32531
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
@@ -1472,16 +1472,31 @@ Prefab:
         type: 2}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975,
+      objectReference: {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0,
         type: 2}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+      objectReference: {fileID: 2140032, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
     - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
         type: 2}
       propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_horizontalMapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397307662189228, guid: 42a6ff98a38479e4d9bc85108517d49c,
+        type: 2}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
